@@ -764,7 +764,7 @@ namespace TextAdventuresCS
             }
             Console.WriteLine("You can't find " + itemToMove + ".");
         }
-
+//*************************************
         private static void DisplayInventory(List<Item> items)
         {
             Console.WriteLine();
@@ -773,12 +773,13 @@ namespace TextAdventuresCS
             {
                 if (thing.Location == Inventory)
                 {
-                    Console.WriteLine(thing.Name);
+                    Console.WriteLine(thing.Name.PadRight(10));
+                    Console.WriteLine(" (" + thing.Description + ")");
                 }
             }
             Console.WriteLine();
         }
-
+//*************************************
         private static void DisplayGettableItemsInLocation(List<Item> items, int currentLocation)
         {
             bool containsGettableItems = false;
