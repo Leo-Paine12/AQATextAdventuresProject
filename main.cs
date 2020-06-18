@@ -716,6 +716,22 @@ namespace TextAdventuresCS
                 {
                     Console.WriteLine("You win!");
                     TakeItemFromOtherCharacter(Items, characters[indexOfOtherCharacter].ID);
+//*************************************************
+                    bool icsd;
+                    string icsd2 = Console.ReadLine();
+                    while (icsd == false)
+                    continue;
+                    {
+                      if ("What goes here?" = icsd2)
+                      {
+                        icsd = true;
+                      }
+                      else
+                      {
+                        Console.WriteLine("They don't have a" + icsd2 + "- try again");
+                      }
+                    }
+//*************************************************
                 }
                 else if (playerScore < otherCharacterScore)
                 {
