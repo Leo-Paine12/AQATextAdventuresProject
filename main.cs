@@ -672,7 +672,21 @@ namespace TextAdventuresCS
             }
             else
             {
-                Console.WriteLine("They don't have that item, so you don't take anything this time.");
+//*************************************************
+                bool icsd = false;
+                do
+                {
+                    Console.WriteLine("They don't have a " + ChosenItem + " - try again");
+                    ChosenItem = Console.ReadLine();
+                    if (ListOfNamesOfItemsInInventory.Contains(ChosenItem))
+                    {
+                      icsd = true;
+                      Console.WriteLine("You have that now.");
+                      int pos = ListOfNamesOfItemsInInventory.IndexOf(ChosenItem);
+                      ChangeLocationOfItem(items, Convert.ToInt32(ListofIndicesOfItemsInInventory[pos]), Inventory);
+                    }
+                } while (icsd == false);
+//**************************************************
             }
         }
 
@@ -716,22 +730,6 @@ namespace TextAdventuresCS
                 {
                     Console.WriteLine("You win!");
                     TakeItemFromOtherCharacter(Items, characters[indexOfOtherCharacter].ID);
-//*************************************************
-                    bool icsd;
-                    string icsd2 = Console.ReadLine();
-                    while (icsd == false)
-                    continue;
-                    {
-                      if ("What goes here?" = icsd2)
-                      {
-                        icsd = true;
-                      }
-                      else
-                      {
-                        Console.WriteLine("They don't have a" + icsd2 + "- try again");
-                      }
-                    }
-//*************************************************
                 }
                 else if (playerScore < otherCharacterScore)
                 {
