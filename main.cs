@@ -636,6 +636,20 @@ namespace TextAdventuresCS
                     }
                 }
                 Count++;
+//***********************************************
+              if (playerHasDie == false)
+              {
+                 Console.WriteLine("Player has no die");
+              }
+              if (playersInSameRoom == false)
+              {
+                Console.WriteLine(otherCharacterName, " is not here");
+              }
+              if (otherCharacterHasDie == false)
+              {
+                Console.WriteLine(otherCharacterName, "has no die");
+              }
+//***********************************************
             }
             return playerHasDie && playersInSameRoom && otherCharacterHasDie;
         }
@@ -699,7 +713,6 @@ namespace TextAdventuresCS
             string ResultForCommand;
             bool diceGamePossible = CheckIfDiceGamePossible(Items, characters, ref indexOfPlayerDie, ref indexOfOtherCharacter, ref indexOfOtherCharacterDie, otherCharacterName);
 //***********************************************
-            bool playerHasDie = false, playersInSameRoom = false, otherCharacterHasDie = false;
             if (playerHasDie == false)
             {
                 Console.WriteLine("Player has no die");
