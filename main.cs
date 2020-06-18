@@ -881,10 +881,7 @@ namespace TextAdventuresCS
                         PlayDiceGame(characters, items, instruction);
                         break;
                     case "quit":
-                    Console.WriteLine("Are you sure? y/n");
-                    string response = Console.ReadLine();
-                    string response2 = response.ToLower();
-                    if (response2 == "y" || response2 == "yes" )
+                    
                     {
                       stopGame = true;
                       Say("You decide to give up, try again another time");
