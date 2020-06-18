@@ -637,18 +637,18 @@ namespace TextAdventuresCS
                 }
                 Count++;
 //***********************************************
-              if (playerHasDie == false)
-              {
-                 Console.WriteLine("Player has no die");
-              }
-              if (playersInSameRoom == false)
-              {
-                Console.WriteLine(otherCharacterName, " is not here");
-              }
-              if (otherCharacterHasDie == false)
-              {
-                Console.WriteLine(otherCharacterName, "has no die");
-              }
+                if (playerHasDie == false)
+                {
+                    Console.WriteLine("Player has no die");
+                }
+                else if (playersInSameRoom == false)
+                {
+                    Console.WriteLine(otherCharacterName, " is not here");
+                }
+                else if (otherCharacterHasDie == false)
+                {
+                    Console.WriteLine(otherCharacterName, "has no die");
+                }
 //***********************************************
             }
             return playerHasDie && playersInSameRoom && otherCharacterHasDie;
@@ -712,20 +712,6 @@ namespace TextAdventuresCS
             int playerScore = 0, otherCharacterScore = 0, indexOfPlayerDie = 0, indexOfOtherCharacterDie = 0, position = 0, indexOfOtherCharacter = 0;
             string ResultForCommand;
             bool diceGamePossible = CheckIfDiceGamePossible(Items, characters, ref indexOfPlayerDie, ref indexOfOtherCharacter, ref indexOfOtherCharacterDie, otherCharacterName);
-//***********************************************
-            if (playerHasDie == false)
-            {
-                Console.WriteLine("Player has no die");
-            }
-            if (playersInSameRoom == false)
-            {
-                Console.WriteLine(otherCharacterName, " is not here");
-            }
-            if (otherCharacterHasDie == false)
-            {
-                Console.WriteLine(otherCharacterName, "has no die");
-            }
-//***********************************************
             if (!diceGamePossible)
             {
                 Console.WriteLine("You can't play a dice game.");
