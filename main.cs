@@ -881,6 +881,7 @@ namespace TextAdventuresCS
                     case "playdice":
                         PlayDiceGame(characters, items, instruction);
                         break;
+//*****************************************************
                     case "quit":
                     Console.WriteLine("Are you sure? y/n");
                     string response = Console.ReadLine();
@@ -890,6 +891,7 @@ namespace TextAdventuresCS
                       stopGame = true;
                       Say("You decide to give up, try again another time");
                     }
+//*****************************************************
                         break;
                     default:
                         Console.WriteLine("Sorry, you don't know how to " + Command + ".");
