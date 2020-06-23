@@ -773,7 +773,7 @@ namespace TextAdventuresCS
             {
                 if (thing.Location == Inventory)
                 {
-                    Console.WriteLine(thing.Name.PadRight(10));
+                    Console.Write(thing.Name.PadRight(10));
                     Console.WriteLine(" (" + thing.Description + ")");
                 }
             }
