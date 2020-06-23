@@ -678,6 +678,7 @@ namespace TextAdventuresCS
                 {
                     Console.WriteLine("They don't have a " + ChosenItem + " - try again");
                     Console.Write("Which item do you want to take?  They have: ");
+                    Console.Write(ListOfNamesOfItemsInInventory[0]);
                     ChosenItem = Console.ReadLine();
                     if (ListOfNamesOfItemsInInventory.Contains(ChosenItem))
                     {
