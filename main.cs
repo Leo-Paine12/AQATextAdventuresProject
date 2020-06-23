@@ -679,6 +679,7 @@ namespace TextAdventuresCS
                     Console.WriteLine("They don't have a " + ChosenItem + " - try again");
                     Console.Write("Which item do you want to take?  They have: ");
                     Console.Write(ListOfNamesOfItemsInInventory[0]);
+                    Count = 1;
                     while (Count < ListOfNamesOfItemsInInventory.Count - 1)
                     {
                         Console.Write(", " + ListOfNamesOfItemsInInventory[Count]);
