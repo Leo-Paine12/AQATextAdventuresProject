@@ -881,9 +881,11 @@ namespace TextAdventuresCS
                         PlayDiceGame(characters, items, instruction);
                         break;
                     case "quit":
-                      stopGame = true;
-                      Say("You decide to give up, try again another time");
+                        stopGame = true;
+                        Say("You decide to give up, try again another time");
                         break;
+                    case "debugchar":
+                        Console.Write(Character.ID.PadRight(10));
                     default:
                         Console.WriteLine("Sorry, you don't know how to " + Command + ".");
                         break;
