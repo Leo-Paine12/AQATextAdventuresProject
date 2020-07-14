@@ -885,7 +885,8 @@ namespace TextAdventuresCS
                         Say("You decide to give up, try again another time");
                         break;
                     case "debugchar":
-                        Console.Write(Character.ID.PadRight(10));
+                        Console.Write(Characters[count].CurrentLocation.PadRight(10));
+                        break;
                     default:
                         Console.WriteLine("Sorry, you don't know how to " + Command + ".");
                         break;
