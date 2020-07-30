@@ -42,7 +42,12 @@ namespace TextAdventuresCS
             instruction = Console.ReadLine().ToLower();
             return instruction;
         }
-
+//**********************************************
+        private static void ShowHelp()
+        {
+            Console.WriteLine("You can enter one of the following commands: \ngo, get, use, examine, say, quit, read, move, open, close and playdice." );
+        }
+//**********************************************
         private static string ExtractCommand(ref string instruction)
         {
             string command = "";
@@ -885,7 +890,9 @@ namespace TextAdventuresCS
                       Say("You decide to give up, try again another time");
                         break;
                     default:
-                        Console.WriteLine("Sorry, you don't know how to " + Command + ".");
+//**********************************************
+                        ShowHelp();
+//**********************************************
                         break;
                 }
             }
