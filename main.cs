@@ -265,13 +265,14 @@ namespace TextAdventuresCS
             Console.WriteLine();
 //******************************************
             string[] array = new string[] { "WELCOME", "TO", "AQATEXTADVENTURES" };
-//******************************************
+
             for (int i = 0; i < array.Length; i++)
             {
               Console.WriteLine(array[i]);
             }
               Console.ReadLine();
         }
+//******************************************
         private static void ExtractResultForCommand(ref string subCommand, ref string subCommandParameter, string resultForCommand)
         {
             int Count = 0;
