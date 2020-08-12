@@ -825,7 +825,17 @@ namespace TextAdventuresCS
                 Say("You can't open that.");
             }
         }
-
+//*************************************
+        private static void DropItem (items, itemToDrop, currentLocation)
+        {
+          Console.WriteLine("Enter item in inventory");
+          string peepee = Console.ReadLine();
+          if (peepee == items)
+          {
+            Console.WriteLine("nah");
+          }
+        }
+//*************************************
         private static void PlayGame(List<Character> characters, List<Item> items, List<Place> places)
         {
             bool stopGame = false;
