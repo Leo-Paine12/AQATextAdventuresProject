@@ -552,11 +552,20 @@ namespace TextAdventuresCS
             string resultForCommand, subCommand = "", subCommandParameter = "";
             int indexOfItem, position;
             bool canGet = false;
+            //*************************************
+            int MAX_INVENTORY = ListofIndicesOfItemsInInventory.Length;
+            //*************************************
             indexOfItem = GetIndexOfItem(itemToGet, -1, items);
             if (indexOfItem == -1)
             {
                 Console.WriteLine("You can't find " + itemToGet + ".");
             }
+            //*************************************
+            else if (MAX_INVENTORY >= 4)
+            {
+                Console.WriteLine("Inventory Full");
+            }
+            //*************************************
             else if (items[indexOfItem].Location == Inventory)
             {
                 Console.WriteLine("You have already got that!");
