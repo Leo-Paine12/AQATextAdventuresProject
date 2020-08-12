@@ -860,9 +860,14 @@ namespace TextAdventuresCS
                     case "read":
                         ReadItem(items, instruction, characters[0].CurrentLocation);
                         break;
-                    case "examine":
+                    case "examine": 
                         Examine(items, characters, instruction, characters[0].CurrentLocation);
                         break;
+//********************************************
+                    case "examine room": 
+                        Examine(items, characters, instruction, characters[0].CurrentLocation);
+                        break;
+//********************************************
                     case "open":
                         resultOfOpenClose = OpenClose(true, items, places, instruction, characters[0].CurrentLocation);
                         DisplayOpenCloseMessage(resultOfOpenClose, true);
