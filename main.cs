@@ -263,7 +263,9 @@ namespace TextAdventuresCS
             Console.WriteLine();
             Console.WriteLine(speech);
             Console.WriteLine();
-
+//******************************************
+            string[] array = new string[] { "WELCOME", "TO", "AQATEXTADVENTURES" };
+//******************************************
             for (int i = 0; i < array.Length; i++)
             {
               Console.WriteLine(array[i]);
