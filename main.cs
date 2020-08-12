@@ -263,18 +263,7 @@ namespace TextAdventuresCS
             Console.WriteLine();
             Console.WriteLine(speech);
             Console.WriteLine();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-              Console.WriteLine(array[i]);
-//********************************************
-              if (array.Length >= 4)
-              {
-                Console.WriteLine("Inventory Full");
-              }
-//********************************************
-            }
-              Console.ReadLine();
+            Console.ReadLine();
         }
         private static void ExtractResultForCommand(ref string subCommand, ref string subCommandParameter, string resultForCommand)
         {
