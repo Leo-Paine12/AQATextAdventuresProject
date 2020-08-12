@@ -821,7 +821,7 @@ namespace TextAdventuresCS
             }
         }
 //*************************************
-        private static void DropItem (items, itemToDrop, currentLocation)
+        private static void DropItem (items, string itemToDrop, int currentLocation)
         {
           Console.WriteLine("Enter item in inventory");
           string peepee = Console.ReadLine();
