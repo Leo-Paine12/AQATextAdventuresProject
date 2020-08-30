@@ -944,16 +944,23 @@ namespace TextAdventuresCS
             List<Place> places = new List<Place>();
             List<Item> items = new List<Item>();
             List<Character> characters = new List<Character>();
-            Console.Write("Enter filename> ");
+            
+            Console.Write("Enter filename or enter Q to quit> ");
             filename = Console.ReadLine() + ".gme";
-            if (LoadGame(filename, characters, items, places))
+            while (Console.ReadLine() != "flag1" || "flag2")
             {
-                PlayGame(characters, items, places);
-            }
-            else
-            {
-                Console.WriteLine("Unable to load game.");
-                Console.ReadLine();
+              if (LoadGame(filename, characters, items, places))
+              {
+                  PlayGame(characters, items, places);
+              }
+              if (filename == "Q")
+              {
+
+              }
+              else
+              {
+                  return;
+              }
             }
         }
     }
