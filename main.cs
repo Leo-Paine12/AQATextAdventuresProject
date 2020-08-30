@@ -184,10 +184,12 @@ namespace TextAdventuresCS
             {
                 DisplayInventory(items);
             }
+      //******************************************
             if (itemToExamine == "room")
             {
                 Console.WriteLine(characters[0].CurrentLocation);
             }
+      //******************************************      
             else
             {
                 int IndexOfItem = GetIndexOfItem(itemToExamine, -1, items);
