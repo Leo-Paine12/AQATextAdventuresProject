@@ -184,6 +184,10 @@ namespace TextAdventuresCS
             {
                 DisplayInventory(items);
             }
+            if (itemToExamine == "room")
+            {
+                Console.WriteLine(characters[0].CurrentLocation);
+            }
             else
             {
                 int IndexOfItem = GetIndexOfItem(itemToExamine, -1, items);
@@ -863,11 +867,6 @@ namespace TextAdventuresCS
                     case "examine": 
                         Examine(items, characters, instruction, characters[0].CurrentLocation);
                         break;
-//********************************************
-                    case "examine room": 
-                        Examine(items, characters, instruction, characters[0].CurrentLocation);
-                        break;
-//********************************************
                     case "open":
                         resultOfOpenClose = OpenClose(true, items, places, instruction, characters[0].CurrentLocation);
                         DisplayOpenCloseMessage(resultOfOpenClose, true);
